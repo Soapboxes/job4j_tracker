@@ -2,21 +2,20 @@ package ru.job4j.oop;
 
 public class Student {
 
-    public void music() {
-        System.out.println("Tra Tra Tra");
+    public void music(String lyrics) {
+        System.out.println("I can sing a song : " + lyrics);
     }
 
     public void sing() {
         System.out.println("I believe I can fly");
     }
 
+
     public static void main(String[] args) {
         Student petya = new Student();
-            petya.music();
-            petya.music();
-            petya.music();
-            petya.sing();
-            petya.sing();
-            petya.sing();
+        String song = "I believe, I can fly";
+        for (int i = 0; i < 3; i++) {
+            petya.music(song);
+        }
     }
 }
