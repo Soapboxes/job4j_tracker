@@ -13,7 +13,7 @@ public class Jukebox {
         Jukebox songPosition = new Jukebox();
         songPosition.music(1);
         songPosition.music(2);
-        songPosition.music(3);
+        songPosition.music(0);
 
         for (int i = 0; i <= 2; i++) {
             System.out.println();
