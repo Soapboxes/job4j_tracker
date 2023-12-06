@@ -6,6 +6,9 @@ public class Computer {
     private int ssd;
     private String cpu;
 
+    public Computer() {
+    }
+
     public void printInfo() {
         System.out.println("Много мониторов: " + multiMonitor);
         System.out.println("SSD: " + ssd + " GB");
@@ -16,9 +19,6 @@ public class Computer {
         this.multiMonitor = multiMonitor;
         this.ssd = ssd;
         this.cpu = cpu;
-    }
-
-    public Computer() {
     }
 
     public static void main(String[] args) {
