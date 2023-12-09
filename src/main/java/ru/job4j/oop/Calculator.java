@@ -35,6 +35,8 @@ public class Calculator {
         int rslDivide = calculator.divide(2);
         System.out.println(rslDivide);
         int allSum = calculator.sumAllOperation(result, rsl, resMin, rslDivide);
+        int allSum2 = calculator.sumAllOperation(10, 1, 5, 2);
         System.out.println(allSum);
+        System.out.println(allSum2);
     }
 }
