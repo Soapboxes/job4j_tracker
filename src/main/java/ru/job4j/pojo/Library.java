@@ -16,8 +16,9 @@ public class Library {
             System.out.println(book.getNameOfBook() + " имеет примерно " + book.getNumberOfPages() + " страниц");
         }
         System.out.println("перестановка по заданию ");
-        books[3] = bookOne;
-        books[0] = bookFour;
+        Book temp = books[0];
+        books[0] = books[3];
+        books[3] = temp;
         for (int i = 0; i < books.length; i++) {
             Book book = books[i];
             System.out.println(book.getNameOfBook() + " имеет примерно " + book.getNumberOfPages() + " страниц");
@@ -25,7 +26,7 @@ public class Library {
         System.out.println("Shown only \"Clean Code\": ");
         for (int i = 0; i < books.length; i++) {
             Book book = books[i];
-            if (book.getNameOfBook().equals("Clean Code")) {
+            if ("Clean Code".equals(book.getNameOfBook())) {
                 System.out.println(book.getNameOfBook() + " имеет примерно " + book.getNumberOfPages() + " страниц");
             }
         }
