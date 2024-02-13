@@ -12,7 +12,7 @@ public class ConcatTest {
             string.append(index);
         }
         System.out.println(builder);
-        System.out.println(string1);
+        System.out.println(string1 + " \n + \\ ");
         System.out.println("Миллисекунд: " + (System.currentTimeMillis() - startTime));
     }
 }
