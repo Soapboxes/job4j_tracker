@@ -17,7 +17,7 @@ public class MagicBall {
                 System.out.println("Нет");
                 break;
             default:
-                System.out.println("не знаю");
+                System.out.println("Не знаю");
                 break;
         }
     }
