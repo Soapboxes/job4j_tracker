@@ -4,7 +4,7 @@ public interface Transport {
 
     void drive();
 
-    void passanger();
+    int passenger(int pax);
 
     void fuel();
 

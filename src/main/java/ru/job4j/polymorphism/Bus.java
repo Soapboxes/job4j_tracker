@@ -7,9 +7,8 @@ public class Bus implements Transport {
     }
 
     @Override
-    public void passanger() {
-        int pax;
-        System.out.println("Пассажиров: ");
+    public int passenger(int pax) {
+        return 0;
     }
 
     @Override
@@ -19,14 +18,14 @@ public class Bus implements Transport {
 
     @Override
     public int intPrice(int prices) {
-        System.out.println("цена топлива: " + prices);
+        System.out.println("цена топлива: " + prices * 62);
         return 0;
     }
 
     public static void main(String[] args) {
         Bus bus = new Bus();
         bus.drive();
-        bus.passanger();
+        bus.passenger(10);
         bus.fuel();
         bus.intPrice(50);
     }
