@@ -12,7 +12,6 @@ public class Bus implements Transport {
         System.out.println("Пассажиров: ");
     }
 
-
     @Override
     public void fuel() {
         int intFuel;
