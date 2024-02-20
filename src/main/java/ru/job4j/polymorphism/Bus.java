@@ -7,8 +7,8 @@ public class Bus implements Transport {
     }
 
     @Override
-    public int passenger(int pax) {
-        return 0;
+    public void passenger(int pax) {
+        System.out.println("Пассажиров: " + pax);
     }
 
     @Override
