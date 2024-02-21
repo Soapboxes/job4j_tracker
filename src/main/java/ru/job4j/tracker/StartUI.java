@@ -3,7 +3,6 @@ package ru.job4j.tracker;
 public class StartUI {
 
     public static void createItem(Input input, Tracker tracker) {
-
     }
 
     public void init(Input input, Tracker tracker) {
