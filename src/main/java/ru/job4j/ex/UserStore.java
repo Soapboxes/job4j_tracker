@@ -32,7 +32,6 @@ public class UserStore {
             ea.printStackTrace();
         } catch (UserNotFoundException e) {
             e.printStackTrace();
-
         }
     }
 }
