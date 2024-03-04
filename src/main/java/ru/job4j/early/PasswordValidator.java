@@ -13,8 +13,8 @@ public class PasswordValidator {
         for (String pass : FORBIDDEN) {
             if (password.toLowerCase().contains(pass)) {
                 throw new IllegalArgumentException(
-                        "Password shouldn't contain substrings: qwerty, " +
-                                "12345, password, admin, user"
+                        "Password shouldn't contain substrings: qwerty, "
+                              + "12345, password, admin, user"
                 );
             }
         }
