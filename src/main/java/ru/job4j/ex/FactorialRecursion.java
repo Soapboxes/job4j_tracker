@@ -2,6 +2,9 @@ package ru.job4j.ex;
 
 public class FactorialRecursion {
     public static int calc(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Факториал отрицательного числа не определен");
+        }
         if (n == 0 || n == 1) {
             return 1;
         }

@@ -16,7 +16,8 @@ class FindTest {
                     Find.get(data, index);
                 }
         );
-        assertThat(exception.getMessage()).isEqualTo("Index out of bound");
+        assertThat(exception.getMessage()).isEqualTo(index + " - index out of bound. "
+                + "Valid range: 0 to " + (data.length - 1));
     }
 
     @Test
@@ -29,7 +30,8 @@ class FindTest {
                     Find.get(data, index);
                 }
         );
-        assertThat(exception.getMessage()).isEqualTo("Index out of bound");
+        assertThat(exception.getMessage()).isEqualTo(index + " - index out of bound. "
+                + "Valid range: 0 to " + (data.length - 1));
     }
 
     @Test
@@ -42,7 +44,8 @@ class FindTest {
                     Find.get(data, index);
                 }
         );
-        assertThat(exception.getMessage()).isEqualTo("Index out of bound");
+        assertThat(exception.getMessage()).isEqualTo(index + " - index out of bound. "
+                + "Valid range: 0 to " + (data.length - 1));
     }
 
     @Test

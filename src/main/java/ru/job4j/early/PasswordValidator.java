@@ -2,12 +2,14 @@ package ru.job4j.early;
 
 public class PasswordValidator {
     private static final String[] FORBIDDEN = {"qwerty", "12345", "password", "admin", "user"};
+    private static final int MAX_LONG = 32;
+    private static final int MIN_LONG = 8;
 
     public static String validate(String password) {
         if (password == null) {
             throw new IllegalArgumentException("Password can't be null");
         }
-        if (password.length() > 32 || password.length() < 8) {
+        if (password.length() > MAX_LONG || password.length() < MIN_LONG) {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
         boolean hasUpCase = false;

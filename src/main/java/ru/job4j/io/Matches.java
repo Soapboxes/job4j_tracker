@@ -11,13 +11,17 @@ public class Matches {
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
-            int matches = Integer.parseInt(input.nextLine());
-            if (matches > 0 && matches <= Math.min(3, count)) {
-                count -= matches;
-                turn = !turn;
-            } else {
-                System.out.println(player + " Ошибка ввода. Число от 1 до 3х, введите заново.");
-                turn = turn;
+            try {
+                int matches = Integer.parseInt(input.nextLine());
+                if (matches > 0 && matches <= Math.min(3, count)) {
+                    count -= matches;
+                    turn = !turn;
+                } else {
+                    System.out.println(player + " Ошибка ввода. Число от 1 до 3х, введите заново.");
+                    turn = turn;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println(player + " Ошибка ввода. Введено не число!");
             }
         }
         if (!turn) {
