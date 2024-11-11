@@ -24,7 +24,7 @@ class StartUITest {
                 new ExitAction(output)
         };
         new StartUI(output).init(input, tracker, actions);
-        assertThat(tracker.findAll()[0].getName()).isEqualTo("Item name");
+        assertThat(tracker.findAll().get(0).getName()).isEqualTo("Item name");
     }
 
     @Test
@@ -118,7 +118,7 @@ class StartUITest {
                 new ExitAction(output)
         };
         new StartUI(output).init(input, tracker, actions);
-        assertThat(tracker.findAll()[0].getName()).isEqualTo("test", "test2");
+        assertThat(tracker.findAll().get(0).getName()).isEqualTo("test", "test2");
         String ln = System.lineSeparator();
         assertThat(output.toString()).isEqualTo(
                 "Меню:" + ln
@@ -148,7 +148,7 @@ class StartUITest {
                 new ExitAction(output)
         };
         new StartUI(output).init(input, tracker, actions);
-        assertThat(tracker.findAll()[0].getName()).isEqualTo(name);
+        assertThat(tracker.findAll().get(0).getName()).isEqualTo(name);
         String ln = System.lineSeparator();
         assertThat(output.toString()).isEqualTo(
                 "Меню:" + ln
