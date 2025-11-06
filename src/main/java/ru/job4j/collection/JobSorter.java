@@ -9,12 +9,27 @@ import java.util.*;
 public class JobSorter {
     public static void main(String[] args) {
         List<Job> jobs = Arrays.asList(
+                new Job("Fix bug", 1),
+                new Job("Fix bug", 4),
+                new Job("Fix bug", 2),
+                new Job("X task", 0)
+        );
+        Collections.sort(jobs, new JobDescByName().thenComparing(new JobDescByPriority()));
+        System.out.println(jobs);
+        Comparator<Job> combine = new JobDescByNameLength()
+                .thenComparing(new JobDescByName())
+                .thenComparing(new JobDescByPriority());
+        Collections.sort(jobs, combine);
+        System.out.println(jobs);
+        /*
+        List<Job> jobs = Arrays.asList(
                 new Job("Fix bugs", 4),
                 new Job("Impl task", 2),
                 new Job("Reboot server", 1));
         System.out.println(jobs);
         Collections.sort(jobs);
         System.out.println(jobs);
+
         List<Item> items = new ArrayList<>();
         items.add(new Item(4, "Aleksandra"));
         items.add(new Item(3, "Petr"));
@@ -26,5 +41,9 @@ public class JobSorter {
         System.out.println("сортировка в обратную");
         items.sort(new ItemDescByName());
         System.out.println(items);
+         */
     }
 }
+
+
+
