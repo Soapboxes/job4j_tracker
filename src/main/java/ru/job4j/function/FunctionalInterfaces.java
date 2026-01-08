@@ -30,12 +30,11 @@ public class FunctionalInterfaces {
         Supplier<List<String>> supplier = () -> new ArrayList<>(map.values());
         List<String> strings = supplier.get();
 
-        Consumer<String> consumer = (string) -> System.out.println(strings);
+        Consumer<String> consumer = s -> System.out.println(s);
 
         Function<String, String> function = string -> string.toUpperCase();
         for (String string : strings) {
-            consumer.accept(string);
-            System.out.println(function.apply(string));
+            consumer.accept(function.apply(string));
         }
     }
 }
