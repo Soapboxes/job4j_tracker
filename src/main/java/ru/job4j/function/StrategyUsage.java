@@ -24,7 +24,6 @@ public class StrategyUsage {
         return function.apply(string);
     }
 
-
     public static void main(String[] args) {
         StrategyUsage usage = new StrategyUsage();
         System.out.println(
