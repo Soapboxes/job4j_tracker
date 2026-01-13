@@ -1,9 +1,6 @@
 package ru.job4j.function;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.*;
 
 public class FunctionalInterfaces {
@@ -36,5 +33,14 @@ public class FunctionalInterfaces {
         for (String string : strings) {
             consumer.accept(function.apply(string));
         }
+        String[] names = {
+                "Ivan", "pEtr"
+        };
+
+        Comparator<String> lengthComparator = (left, right) -> {
+            System.out.println("execute comparator");
+            return Integer.compare(left.length(), right.length());
+        };
+        Arrays.sort(names, lengthComparator);
     }
 }
